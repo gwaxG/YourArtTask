@@ -1,4 +1,3 @@
-import { IArtwork } from "../../lib/artwork";
 import {useState} from 'react'
 import "./page.css"
 

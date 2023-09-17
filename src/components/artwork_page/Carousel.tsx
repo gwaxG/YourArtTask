@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./page.css"
 
 const Carousel = (p: { images: string[] }) => {
