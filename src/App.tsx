@@ -1,19 +1,32 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.css'
-import Painting from './components/Painting'
+import {useState} from "react"
+import './index.css'
+import Paintings from './components/Paintings'
 import Home from './components/Home'
 import Artwork from './components/Artwork'
 import Header from './components/Header'
 
 const App = () => {
+  const [artworkName, setArtworkName] = useState("")
+
   return (
      <>
-        <Header/>
-        <Routes>
-           <Route path="/" element={<Home />} />
-           <Route path="/artwork" element={<Artwork />} />
-           <Route path="/painting" element={<Painting />} />
-        </Routes>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col">
+              <Header artworkName={artworkName}/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/artwork/:id" element={<Artwork setArtworkName={setArtworkName} />} />
+                <Route path="/paintings" element={<Paintings />} />
+              </Routes>
+            </div>
+          </div>
+        </div>
      </>
   );
  };

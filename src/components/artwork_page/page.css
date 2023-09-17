@@ -1,0 +1,106 @@
+.descr-btn {
+    background: none;
+    border: none;
+    
+}
+
+.mirror {
+  transform: scaleX(-1);
+}
+
+.inp {
+  width: 45%; 
+  background-color: lightgray;
+}
+
+.center {
+  text-align: center;
+  vertical-align:middle;
+}
+
+.icon {
+  margin-left: 5em;
+  margin-top: 1em;
+}
+
+.artwork-details {
+  padding-right: 50%
+}
+
+.rounded-btn {
+  margin-top: 2em;
+  width: 100%;
+  padding: 10px 20px; 
+  border: none;
+  cursor: pointer; 
+  border-radius:50px 50px 50px 50px;
+}
+
+.btn-black {
+  background-color: black;
+  color: white; 
+}
+
+.btn-white {
+  background-color: white;
+  color: black; 
+  border-color: black;
+  border: solid;
+  margin-bottom: 1em;
+}
+
+.centrilize {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 100%;            
+}
+
+.image {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 100%;            
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-images {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 15em; /* Adjust as needed */
+  height: 15em;
+  margin: 3em;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 5em;
+  cursor: pointer;
+  color: gray;
+  height: 5em;
+  height: 3em;
+  font-weight: 1000;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden-arrow {
+  color: white;
+}
+
+td {
+  padding-right: 2em
+}
+
+hr {
+  height: 2px;
+  background: black;
+}

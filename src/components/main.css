@@ -1,0 +1,42 @@
+.header {
+    text-align: left;
+    margin: 1em;
+    font-size: large;
+    color: gray;
+}
+
+.fonts {
+    font-weight: 390;
+    font-style: normal;
+}
+
+.paintings {
+    text-align: center;
+}
+
+.links {
+    color: gray
+}
+
+div {
+    align-content: center;
+    display: block;
+}
+
+.main-btn {
+    margin: 1em;
+    width: 25%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius:50px 50px 50px 50px;
+    background-color: transparent;
+    border-color: transparent;
+    border: solid;
+}
+  
+.center {
+    text-align: center;
+    vertical-align:middle;
+}  
