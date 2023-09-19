@@ -1,10 +1,17 @@
 import { IArtwork } from "../../lib/artwork";
+import React, {useState} from 'react'
 import "./page.css"
 
 const capitalize = (s: string) => 
   s && s[0].toUpperCase() + s.slice(1);
 
 const Details = (p: { artwork: IArtwork }) => {
+  const [country, setCountry] = useState("France")
+  const [code, setCode] = useState("75001")
+
+  const onChangeCountry = (e: React.ChangeEvent<HTMLInputElement>) => setCountry(e.target.value);
+  const onChangeCode = (e: React.ChangeEvent<HTMLInputElement>) => setCode(e.target.value);  
+
   return (
     <div className="artwork-details">
       <h3><b>{p.artwork.title}</b></h3>
@@ -15,14 +22,14 @@ const Details = (p: { artwork: IArtwork }) => {
       <p>{capitalize(p.artwork.category.toLocaleLowerCase())}, {p.artwork.creationYear}</p>
       <p>{p.artwork.dimensions.width} W x {p.artwork.dimensions.height} H x {p.artwork.dimensions.depth} D in</p>
       <h5 style={{padding: "5px"}}><b>{p.artwork.price.toLocaleString()} </b><i className="fas fa-euro-sign"/> </h5>
-      <button className="center rounded-btn btn-black">Acquire</button>
-      <button className="center rounded-btn btn-white">Make an offer</button>
+      <button onClick={() => {alert("You got it!")}} className="center rounded-btn btn-black">Acquire</button>
+      <button onClick={() => {alert("If and only if you propose more!")}} className="center rounded-btn btn-white">Make an offer</button>
       <h6 style={{color: "gray"}}><i className="fas fa-hourglass-start"></i> PRE-RESERVE FOR 24 HOURS</h6>
       <p style={{fontSize: "small"}}><i style={{marginRight: "2em"}} className="fas fa-check"/>XXX <i className="fas fa-euro-sign"/> estimated delivery fee for France </p>
       <p style={{fontWeight: 600}}>In order to obtain an accurate delivery fee, please enter your country of residence and zip code:</p>
       <div style={{display: "flex"}}>
-        <input style={{marginRight: "10%"}} className="inp" type="text" value="France"/>
-        <input className="inp" type="text" value="75001"/>
+        <input style={{marginRight: "10%"}} onChange={(e) => onChangeCountry(e)}  className="inp" type="text" value={country}/>
+        <input className="inp" type="text" onChange={(e) => onChangeCode(e)} value={code}/>
       </div>
       <p style={{marginTop: "1em", fontWeight: 600, fontSize: "small"}}><i style={{marginRight: "1em"}} className="fas fa-truck mirror"/> Delivery fee is YYY <i className="fas fa-euro-sign"/> </p>
       <p style={{marginTop: "3em", fontWeight: 600, fontSize: "small"}}><i style={{marginRight: "1em"}} className="fas fa-map-pin"/> Free pickup in <b>Brussels, Belgium</b> </p>

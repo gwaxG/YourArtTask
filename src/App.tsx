@@ -11,7 +11,7 @@ const App = () => {
 
   return (
      <>
-        <div className="container-fluid">
+        <div className="col-md-12">
           <div className="row">
             <div className="col">
               <Header artworkName={artworkName}/>

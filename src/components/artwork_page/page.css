@@ -101,6 +101,13 @@ td {
 }
 
 hr {
-  height: 2px;
-  background: black;
+  height: 1px;
+  background: gray;
+}
+
+.hr-small {
+  align: center;
+  width: 80%;
+  height: 1px;
+  background: gray;
 }
