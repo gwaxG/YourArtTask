@@ -24,7 +24,7 @@ interface ArtistShort {
   fullname: string;
 }
   
-  // Main interface for the artwork
+// Main interface for the artwork
 export interface IArtwork {
   _id: string;
   title: string;
